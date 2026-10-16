@@ -52,7 +52,7 @@ portfolio/
 │  ├─ favicon.svg
 │  ├─ robots.txt
 │  └─ resume/
-│     └─ Lokeshwaran_K_Resume.pdf   # placeholder — replace with your final resume
+│     └─ Lokeshwaran_K_Resume.pdf   # live resume PDF
 ├─ src/
 │  ├─ main.jsx                # React entry point
 │  ├─ App.jsx                 # Page composition
@@ -87,9 +87,10 @@ All copy is separated from the UI. Update the files in `src/data/`:
 
 ### Replace the resume
 
-Drop your final PDF at `public/resume/Lokeshwaran_K_Resume.pdf` (same file name). Every
-**Download Resume** button links to `/resume/Lokeshwaran_K_Resume.pdf`. To use a different name,
-update `resumeUrl` in `src/data/profile.js`.
+The live resume is `public/resume/Lokeshwaran_K_Resume.pdf`. To update it, drop a new PDF at the
+same path (same file name). Every **Wanna see my resume** button links to
+`/resume/Lokeshwaran_K_Resume.pdf`. To use a different file name, update `resumeUrl` in
+`src/data/profile.js`.
 
 ### Contact form
 
@@ -149,5 +150,4 @@ vercel --prod   # production deployment
 ## Notes
 
 - The site contains no fabricated metrics, proficiency percentages, or business results.
-- The resume PDF, profile photo, and canonical URL are the only placeholders to fill in before
-  going public.
+- The canonical URL in `index.html` is still a placeholder; everything else is live content.
