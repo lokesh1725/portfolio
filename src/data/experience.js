@@ -4,7 +4,7 @@ export const experience = [
     role: 'Full-Stack Developer',
     company: 'Blue Silicon Infotech Pvt. Ltd.',
     location: 'Chennai',
-    period: 'Jul 2025 – Present',
+    period: 'Aug 2026 – Present',
     summary:
       'Full-stack development on Medsy, a medical education platform, with frontend, backend, API and database work.',
     bullets: [
