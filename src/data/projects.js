@@ -6,7 +6,7 @@ export const projects = [
       'A task-management application with CRUD functionality and reusable React components.',
     stack: ['React.js', 'JavaScript', 'HTML5', 'CSS3'],
     links: {
-      github: 'https://github.com/lokesh1725',
+      github: 'https://github.com/lokesh1725/daily-work/tree/main/todoreactproject',
       demo: '',
     },
   },
@@ -16,7 +16,7 @@ export const projects = [
       'A database-driven application for storing and retrieving movie records.',
     stack: ['Python', 'SQLite', 'SQL'],
     links: {
-      github: 'https://github.com/lokesh1725',
+      github: 'https://github.com/lokesh1725/movie',
       demo: '',
     },
   },
@@ -26,7 +26,7 @@ export const projects = [
       'A utility for estimating loan repayments based on principal, interest rate and loan duration.',
     stack: ['Python', 'C'],
     links: {
-      github: 'https://github.com/lokesh1725',
+      github: 'https://github.com/lokesh1725/daily-work',
       demo: '',
     },
   },
