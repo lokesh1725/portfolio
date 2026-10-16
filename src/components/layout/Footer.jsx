@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="border-t border-slate-200 bg-slate-50">
       <div className="container-page flex flex-col items-center justify-between gap-6 py-10 sm:flex-row">
         <div className="text-center sm:text-left">
-          <p className="font-semibold text-slate-900">{profile.name}</p>
+          <p className="font-semibold uppercase text-slate-900">{profile.name}</p>
           <p className="mt-1 text-sm text-slate-600">{profile.role} · {profile.location}</p>
         </div>
 
@@ -43,7 +43,7 @@ export default function Footer() {
 
       <div className="border-t border-slate-200">
         <p className="container-page py-5 text-center text-xs text-slate-500">
-          © {year} {profile.name}. All rights reserved.
+          © {year} <span className="uppercase">{profile.name}</span>. All rights reserved.
         </p>
       </div>
     </footer>

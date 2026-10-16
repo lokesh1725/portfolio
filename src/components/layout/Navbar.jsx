@@ -23,7 +23,7 @@ export default function Navbar() {
       <nav className="container-page flex h-16 items-center justify-between gap-4" aria-label="Main">
         <a
           href="#home"
-          className="text-sm font-semibold tracking-tight text-slate-900 sm:text-base"
+          className="text-sm font-semibold uppercase tracking-tight text-slate-900 sm:text-base"
           onClick={() => setOpen(false)}
         >
           {profile.name}

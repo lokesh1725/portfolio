@@ -35,7 +35,7 @@ export default function Hero() {
               Open to entry-level software roles
             </span>
 
-            <h1 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="mt-5 text-3xl font-semibold uppercase tracking-tight sm:text-4xl lg:text-5xl">
               {profile.name}
             </h1>
             <p className="mt-2 text-lg font-medium text-brand-700 sm:text-xl">{profile.role}</p>
