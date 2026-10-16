@@ -285,7 +285,7 @@ export default function Contact() {
             className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-800 transition-colors hover:border-slate-400 hover:bg-slate-50"
           >
             <Download size={16} aria-hidden="true" />
-            Download Resume
+            Wanna see my resume
           </a>
         </Reveal>
 

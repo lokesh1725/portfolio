@@ -49,7 +49,7 @@ export default function Hero() {
               </Button>
               <Button href={profile.resumeUrl} download variant="secondary">
                 <Download size={16} aria-hidden="true" />
-                Download Resume
+                Wanna see my resume
               </Button>
               <Button href="#contact" variant="secondary">
                 <Mail size={16} aria-hidden="true" />

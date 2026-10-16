@@ -52,15 +52,6 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <a
-            href={profile.resumeUrl}
-            download
-            className="hidden items-center gap-2 rounded-lg border border-slate-300 px-3.5 py-2 text-sm font-medium text-slate-800 transition-colors hover:border-slate-400 hover:bg-slate-50 sm:inline-flex"
-          >
-            <Download size={16} aria-hidden="true" />
-            Resume
-          </a>
-
           <button
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden"
@@ -96,7 +87,7 @@ export default function Navbar() {
                 className="inline-flex items-center gap-2 rounded-lg border border-slate-300 px-3.5 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
               >
                 <Download size={16} aria-hidden="true" />
-                Download Resume
+                Wanna see my resume
               </a>
             </li>
           </ul>
