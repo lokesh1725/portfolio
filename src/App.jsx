@@ -3,7 +3,6 @@ import Footer from './components/layout/Footer.jsx'
 import Hero from './components/sections/Hero.jsx'
 import About from './components/sections/About.jsx'
 import Skills from './components/sections/Skills.jsx'
-import FeaturedProject from './components/sections/FeaturedProject.jsx'
 import Projects from './components/sections/Projects.jsx'
 import Experience from './components/sections/Experience.jsx'
 import Education from './components/sections/Education.jsx'
@@ -25,7 +24,6 @@ export default function App() {
         <Hero />
         <About />
         <Skills />
-        <FeaturedProject />
         <Projects />
         <Experience />
         <Education />

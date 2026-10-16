@@ -11,7 +11,7 @@ export const experience = [
       'Developed and maintained REST APIs using Python and Flask.',
       'Worked with MongoDB for queries and data management.',
       'Implemented CRUD operations, filtering and API-based data retrieval.',
-      'Worked on question-bank metrics across the frontend and backend (see the Medsy project below).',
+      'Worked on question-bank metrics across the frontend and backend.',
       'Integrated and tested APIs, and debugged backend issues.',
       'Used Git and GitHub for version control and Linux for development.',
     ],

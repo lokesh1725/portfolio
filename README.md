@@ -9,8 +9,8 @@ CSS v4** and **Lucide** icons.
 
 - Light, minimal design with dark typography and subtle blue accents.
 - Sticky top navigation with scroll-spy active states and a mobile menu.
-- Hero, About, Technical Skills, Featured Project (Medsy metrics), Other Projects, Experience,
-  Education & Achievements, and Contact sections.
+- Hero, About, Technical Skills, Projects, Experience, Education & Achievements, and Contact
+  sections.
 - Accessible semantic HTML, keyboard-focus styles, and reduced-motion support.
 - SEO title/metadata and Open Graph tags.
 - Fast, static, no backend required.
@@ -60,8 +60,7 @@ portfolio/
 │  ├─ data/                   # Content lives here (edit these, not the UI)
 │  │  ├─ profile.js           # Name, role, contacts, about text, nav links
 │  │  ├─ skills.js            # Skill groups
-│  │  ├─ featuredProject.js   # Medsy featured-project content
-│  │  ├─ projects.js          # Other projects
+│  │  ├─ projects.js          # Projects
 │  │  ├─ experience.js        # Work experience
 │  │  ├─ education.js         # Education + achievements
 │  │  └─ certifications.js    # Certifications + additional info
@@ -69,7 +68,7 @@ portfolio/
 │  │  └─ useScrollSpy.js
 │  └─ components/
 │     ├─ layout/  (Navbar, Footer)
-│     ├─ sections/ (Hero, About, Skills, FeaturedProject, Projects,
+│     ├─ sections/ (Hero, About, Skills, Projects,
 │     │             Experience, Education, Contact)
 │     └─ ui/      (Section, Reveal, Badge, Button)
 └─ .env.example               # Optional contact-form endpoint
@@ -81,8 +80,7 @@ All copy is separated from the UI. Update the files in `src/data/`:
 
 - **Personal details / links** → `src/data/profile.js`
 - **Skills** → `src/data/skills.js`
-- **Featured Medsy project** → `src/data/featuredProject.js`
-- **Other projects** → `src/data/projects.js`
+- **Projects** → `src/data/projects.js`
 - **Experience** → `src/data/experience.js`
 - **Education / achievements** → `src/data/education.js`
 - **Certifications** → `src/data/certifications.js`
@@ -92,12 +90,6 @@ All copy is separated from the UI. Update the files in `src/data/`:
 Drop your final PDF at `public/resume/Lokeshwaran_K_Resume.pdf` (same file name). Every
 **Download Resume** button links to `/resume/Lokeshwaran_K_Resume.pdf`. To use a different name,
 update `resumeUrl` in `src/data/profile.js`.
-
-### Add the Medsy screenshots
-
-The featured project has a **Screenshots** section that stays hidden until you add real images.
-Add your images to `public/` (for example `public/medsy-dashboard.png`) and set the `src` values in
-the `screenshots` array of `src/data/featuredProject.js` — the section appears automatically.
 
 ### Contact form
 
@@ -157,6 +149,5 @@ vercel --prod   # production deployment
 ## Notes
 
 - The site contains no fabricated metrics, proficiency percentages, or business results.
-- The Medsy project is an internal application: it lists only documented contributions.
-- Screenshot slots, the resume PDF, profile URLs, and the canonical URL are the only placeholders
-  to fill in before going public.
+- The resume PDF, profile photo, and canonical URL are the only placeholders to fill in before
+  going public.
