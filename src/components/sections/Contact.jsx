@@ -272,7 +272,7 @@ export default function Contact() {
             <ContactItem
               icon={Linkedin}
               label="LinkedIn"
-              value="linkedin.com/in/lokeshwaran-k"
+              value="linkedin.com/in/lokeshwaran-krishnasamy-b3b441259"
               href={profile.linkedin}
               external
             />

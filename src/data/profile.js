@@ -14,7 +14,7 @@ export const profile = {
   email: 'lokeshwarankrishnasamy0107@gmail.com',
   phone: '+91-99521-46912',
   github: 'https://github.com/lokesh1725',
-  linkedin: 'https://www.linkedin.com/in/lokeshwaran-k/',
+  linkedin: 'https://www.linkedin.com/in/lokeshwaran-krishnasamy-b3b441259/',
   // Profile photo shown on the left of the hero section.
   photo: `${base}profile/lokeshwaran.jpg`,
   photoAlt: 'Portrait of Lokeshwaran K',
