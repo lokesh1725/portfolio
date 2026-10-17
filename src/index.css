@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 
+/* Class-based dark mode: toggles .dark on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans:
     'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial,
@@ -30,7 +33,7 @@
   }
 
   body {
-    @apply bg-white text-slate-700 antialiased;
+    @apply bg-white text-slate-700 antialiased dark:bg-slate-950 dark:text-slate-300;
     font-family: var(--font-sans);
     text-rendering: optimizeLegibility;
   }
@@ -39,7 +42,7 @@
   h2,
   h3,
   h4 {
-    @apply text-slate-900;
+    @apply text-slate-900 dark:text-slate-100;
     font-weight: 600;
     letter-spacing: -0.01em;
   }
@@ -53,6 +56,11 @@
   ::selection {
     background: var(--color-brand-100);
     color: var(--color-brand-900);
+  }
+
+  .dark ::selection {
+    background: var(--color-brand-900);
+    color: var(--color-brand-50);
   }
 }
 

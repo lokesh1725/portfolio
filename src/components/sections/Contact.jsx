@@ -88,25 +88,25 @@ function ContactForm() {
   }
 
   const fieldClass = (field) =>
-    `w-full rounded-lg border bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 ${
+    `w-full rounded-lg border bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 dark:bg-slate-900 dark:text-slate-100 dark:placeholder:text-slate-500 ${
       errors[field]
-        ? 'border-red-300 focus:border-red-400 focus:ring-red-100'
-        : 'border-slate-300 focus:border-brand-500 focus:ring-brand-100'
+        ? 'border-red-300 focus:border-red-400 focus:ring-red-100 dark:border-red-800 dark:focus:border-red-500 dark:focus:ring-red-900/40'
+        : 'border-slate-300 focus:border-brand-500 focus:ring-brand-100 dark:border-slate-600 dark:focus:ring-brand-900/40'
     }`
 
   const statusColors = {
-    error: 'text-red-600',
-    success: 'text-green-700',
-    info: 'text-slate-600',
-    loading: 'text-slate-600',
-    idle: 'text-slate-600',
+    error: 'text-red-600 dark:text-red-400',
+    success: 'text-green-700 dark:text-green-400',
+    info: 'text-slate-600 dark:text-slate-400',
+    loading: 'text-slate-600 dark:text-slate-400',
+    idle: 'text-slate-600 dark:text-slate-400',
   }
 
   return (
     <form onSubmit={onSubmit} noValidate className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-slate-700">
+          <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">
             Name
           </label>
           <input
@@ -122,14 +122,14 @@ function ContactForm() {
             placeholder="Your name"
           />
           {errors.name && (
-            <p id="name-error" className="mt-1 text-xs text-red-600">
+            <p id="name-error" className="mt-1 text-xs text-red-600 dark:text-red-400">
               {errors.name}
             </p>
           )}
         </div>
 
         <div>
-          <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-slate-700">
+          <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">
             Email
           </label>
           <input
@@ -145,7 +145,7 @@ function ContactForm() {
             placeholder="you@example.com"
           />
           {errors.email && (
-            <p id="email-error" className="mt-1 text-xs text-red-600">
+            <p id="email-error" className="mt-1 text-xs text-red-600 dark:text-red-400">
               {errors.email}
             </p>
           )}
@@ -153,7 +153,7 @@ function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="subject" className="mb-1.5 block text-sm font-medium text-slate-700">
+        <label htmlFor="subject" className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">
           Subject
         </label>
         <input
@@ -168,14 +168,14 @@ function ContactForm() {
           placeholder="What is this about?"
         />
         {errors.subject && (
-          <p id="subject-error" className="mt-1 text-xs text-red-600">
+          <p id="subject-error" className="mt-1 text-xs text-red-600 dark:text-red-400">
             {errors.subject}
           </p>
         )}
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-slate-700">
+        <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">
           Message
         </label>
         <textarea
@@ -190,7 +190,7 @@ function ContactForm() {
           placeholder="Write your message…"
         />
         {errors.message && (
-          <p id="message-error" className="mt-1 text-xs text-red-600">
+          <p id="message-error" className="mt-1 text-xs text-red-600 dark:text-red-400">
             {errors.message}
           </p>
         )}
@@ -200,7 +200,7 @@ function ContactForm() {
         <button
           type="submit"
           disabled={status.type === 'loading'}
-          className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60"
+          className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60 dark:hover:bg-brand-500"
         >
           <Send size={16} aria-hidden="true" />
           {status.type === 'loading' ? 'Sending…' : 'Send message'}
@@ -218,14 +218,16 @@ function ContactForm() {
 function ContactItem({ icon: Icon, label, value, href, external }) {
   const content = (
     <>
-      <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
+      <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700 dark:bg-brand-900/30 dark:text-brand-400">
         <Icon size={18} aria-hidden="true" />
       </span>
       <span>
-        <span className="block text-xs font-semibold tracking-wide text-slate-500 uppercase">
+        <span className="block text-xs font-semibold tracking-wide text-slate-500 uppercase dark:text-slate-400">
           {label}
         </span>
-        <span className="mt-0.5 block break-words text-sm font-medium text-slate-800">{value}</span>
+        <span className="mt-0.5 block break-words text-sm font-medium text-slate-800 dark:text-slate-200">
+          {value}
+        </span>
       </span>
     </>
   )
@@ -282,16 +284,21 @@ export default function Contact() {
           <a
             href={profile.resumeUrl}
             download
-            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-800 transition-colors hover:border-slate-400 hover:bg-slate-50"
+            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-800 transition-colors hover:border-slate-400 hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-slate-500 dark:hover:bg-slate-800"
           >
             <Download size={16} aria-hidden="true" />
             Wanna see my resume
           </a>
         </Reveal>
 
-        <Reveal delay={120} className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-7">
-          <h3 className="text-base font-semibold text-slate-900">Send a message</h3>
-          <p className="mt-1 text-sm text-slate-600">
+        <Reveal
+          delay={120}
+          className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-7 dark:border-slate-800 dark:bg-slate-900"
+        >
+          <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">
+            Send a message
+          </h3>
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
             Fill in the form and it will open your email app with the message ready to send.
           </p>
           <div className="mt-5">

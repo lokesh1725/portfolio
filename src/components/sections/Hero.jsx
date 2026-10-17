@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="container-page">
         <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,320px)_1fr] lg:gap-14">
           <Reveal className="order-2 lg:order-1">
-            <div className="mx-auto w-full max-w-xs overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm">
+            <div className="mx-auto w-full max-w-xs overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm dark:border-slate-800 dark:bg-slate-800">
               <img
                 src={profile.photo}
                 alt={profile.photoAlt}
@@ -30,7 +30,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={100} className="order-1 lg:order-2">
-            <span className="inline-flex items-center gap-2 rounded-full border border-brand-100 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700">
+            <span className="inline-flex items-center gap-2 rounded-full border border-brand-100 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 dark:border-brand-900 dark:bg-brand-900/30 dark:text-brand-400">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true" />
               Open to entry-level software roles
             </span>
@@ -38,9 +38,13 @@ export default function Hero() {
             <h1 className="mt-5 text-3xl font-semibold uppercase tracking-tight sm:text-4xl lg:text-5xl">
               {profile.name}
             </h1>
-            <p className="mt-2 text-lg font-medium text-brand-700 sm:text-xl">{profile.role}</p>
+            <p className="mt-2 text-lg font-medium text-brand-700 sm:text-xl dark:text-brand-400">
+              {profile.role}
+            </p>
 
-            <p className="mt-5 max-w-xl leading-relaxed text-slate-600">{profile.heroText}</p>
+            <p className="mt-5 max-w-xl leading-relaxed text-slate-600 dark:text-slate-400">
+              {profile.heroText}
+            </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Button href="#projects">
@@ -62,19 +66,19 @@ export default function Hero() {
                 href={profile.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-brand-700"
+                className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-brand-700 dark:text-slate-400 dark:hover:text-brand-400"
               >
                 <Github size={18} aria-hidden="true" />
                 GitHub
               </a>
-              <span className="text-slate-300" aria-hidden="true">
+              <span className="text-slate-300 dark:text-slate-700" aria-hidden="true">
                 |
               </span>
               <a
                 href={profile.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-brand-700"
+                className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-brand-700 dark:text-slate-400 dark:hover:text-brand-400"
               >
                 <Linkedin size={18} aria-hidden="true" />
                 LinkedIn
@@ -84,16 +88,18 @@ export default function Hero() {
         </div>
 
         <Reveal delay={160} className="mt-12">
-          <dl className="grid gap-6 rounded-2xl border border-slate-200 bg-slate-50/60 p-6 sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="grid gap-6 rounded-2xl border border-slate-200 bg-slate-50/60 p-6 sm:grid-cols-2 lg:grid-cols-4 dark:border-slate-800 dark:bg-slate-900/60">
             {facts.map((fact) => {
               const Icon = fact.icon
               return (
                 <div key={fact.label}>
-                  <dt className="text-xs font-semibold tracking-wide text-slate-500 uppercase">
+                  <dt className="text-xs font-semibold tracking-wide text-slate-500 uppercase dark:text-slate-400">
                     {fact.label}
                   </dt>
-                  <dd className="mt-1 flex items-center gap-2 text-sm font-medium text-slate-800">
-                    {Icon && <Icon size={16} className="text-brand-600" aria-hidden="true" />}
+                  <dd className="mt-1 flex items-center gap-2 text-sm font-medium text-slate-800 dark:text-slate-200">
+                    {Icon && (
+                      <Icon size={16} className="text-brand-600 dark:text-brand-400" aria-hidden="true" />
+                    )}
                     {fact.value}
                   </dd>
                 </div>
